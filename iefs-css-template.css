@@ -1,0 +1,969 @@
+
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ /*  background: rgba(255, 255, 255, 0.7); Transparent background */
+  opacity: 0.7
+}
+
+header .logo img {
+  width: 180px; /* Logo size */
+  background-color: #f6fcf8;
+  border-radius: 15px;
+}
+
+header .contact-btn a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #f3eded;
+  background-color: #26d962;
+  padding: 10px 50px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+header .contact-btn a:hover {
+  background-color: #ef954c;
+}
+
+.fa-envelope-o {
+  margin-right: 8px;
+}
+
+/* Hero Section */
+.hero {
+  background: url('img/iefs-hero.png') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding-top: 100px; /* Space for fixed header */
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  font-weight: 600;
+  
+}
+
+/* Mobile Responsiveness */
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+      font-size: 3rem;
+  }
+  .hero-content p {
+      font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  header .contact-btn a{
+    display: none; /* Hide contact button on small screens */
+    align-items: center;
+  }
+
+  header .logo img {
+    display: none;
+    width: 180px; /* Logo size */
+    background-color: #f6fcf8;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 412px) {
+  .hero-content h1 {
+      font-size: 2.5rem;
+
+      header .contact-btn a{
+        display: none; /* Hide contact button on small screens */
+        align-items: center;
+      }
+  }
+  .hero-content p {
+      font-size: 1rem;
+  }
+
+  header .logo img {
+    display: none;
+    width: 180px; /* Logo size */
+    background-color: #f6fcf8;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-content h1 {
+      font-size: 2rem;
+  }
+  .hero-content p {
+      font-size: 0.9rem;
+  }
+
+  header .contact-btn a {
+    display: none; /* Hide contact button on small screens */
+    align-items: center;
+  }
+
+  header .logo img {
+    display: none;
+    width: 180px; /* Logo size */
+    background-color: #f6fcf8;
+    border-radius: 15px;
+  }
+
+}
+
+
+            /* Barre horizontale fixe avec 3 onglets centrés */
+
+
+    .horizontal-bar {
+      position: sticky;
+      bottom: 0; /* ou top: 0; si tu veux la mettre en haut */
+      width:  30%; /* Réduction de la largeur */
+      margin: 0 auto 10px auto; /* Centre la barre horizontalement + marge en bas */
+      background-color: #77d762cc; /* Vert légèrement transparent */
+      backdrop-filter: blur(5px);
+      box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      padding: 10px 0;
+      border-radius: 10px; /* Optionnel pour des bords arrondis */
+    }
+    
+
+.horizontal-bar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.horizontal-bar li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  color: #efeeee;
+  transition: color 0.3s ease;
+}
+
+.horizontal-bar li a:hover {
+  color: #26d962;
+}
+
+/* Responsive */
+
+/* Responsive : Big screen */
+@media (max-width: 2560px) {
+  .horizontal-bar {
+    width: 20%;
+  }
+}
+
+
+@media (max-width: 1440px) {
+  .horizontal-bar {
+    width: 30%;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .horizontal-bar {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .horizontal-bar ul {
+    gap: 30px;
+  }
+
+  .horizontal-bar li a {
+    font-size: 16px;
+  }
+
+  .horizontal-bar {
+    width: 40%; /* Augmente la largeur pour les écrans plus petits */
+  }
+
+}
+
+@media (max-width: 692px) and (min-width: 413px) {
+  .horizontal-bar {
+    width: 65%; /* Barre un peu plus large pour cette plage d’écran */
+  }
+}
+
+
+@media (max-width: 412px) {
+  .horizontal-bar ul {
+    gap: 20px;
+  }
+
+  .horizontal-bar li a {
+    font-size: 14px;
+  }
+
+  .horizontal-bar {
+    width: 70%; /* Augmente la largeur pour les écrans plus petits */
+  }
+}
+
+
+           /*  services-section     */
+
+                    /* Section principale */
+.services-section {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.services-section .headline {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Container des cartes */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Card */
+.card {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Effet de zoom au hover */
+.card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-image {
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.card h3 {
+  padding: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Animation direction */
+.fade-in-left {
+  transform: translateX(-50px);
+}
+
+.fade-in-right {
+  transform: translateX(50px);
+}
+
+.fade-in-left.visible,
+.fade-in-right.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 2560px) {
+  .card {
+    width: 450px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .card {
+    width: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+
+  .services-section .headline {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 412px) {
+  .services-section .headline {
+    font-size: 2rem;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+
+
+/*   full service      */
+
+  /* Full-service section */
+
+/* Section principale */
+.services-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #d1f6b8, #b8e994);
+  text-align: center;
+}
+
+/* Headline */
+.headline {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+/* Container des cartes */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Cartes */
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 450px;
+  max-width: 90%;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: pointer;
+}
+
+/* Image dans carte */
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Titre dans carte */
+.card h2 {
+  padding: 20px;
+  font-size: 1.7rem;
+  color: #2c3e50;
+}
+
+/* Apparition au scroll */
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover sur carte */
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .headline {
+    font-size: 2.2rem;
+  }
+}
+
+
+
+
+
+  /*   About us     */
+
+    /* Section principale */
+.about-section {
+  padding: 80px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+/* Titre */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+/* Chaque paragraphe-item */
+.paragraph-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 800px;
+  margin: 20px auto; /* Espace entre paragraphes + centrage */
+  text-align: left;
+}
+
+/* La barre verte */
+.bar {
+  width: 6px;
+  background-color: #28a745; /* Vert */
+  border-radius: 5px;
+}
+
+/* Texte du paragraphe */
+.paragraph-item p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .paragraph-item p {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* Devis */
+
+    /* Section globale */
+.quote-form-section {
+  padding: 80px 20px;
+ /* background: linear-gradient(135deg, #f0f4f8, #d9e4f5);  /*Couleurs douces */
+  background:  #d1f6b8;;
+  text-align: center;
+}
+
+/* Titre */
+.headline {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #34495e;
+  font-weight: bold;
+}
+
+/* Formulaire */
+.quote-form {
+  background: white;
+  max-width: 600px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Groupes de champs */
+.form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+/* Inputs et Textarea */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #f9f9f9;
+  transition: 0.3s ease;
+}
+
+/* Effet focus */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #3498db;
+  background: #fff;
+  outline: none;
+}
+
+/* Labels */
+.form-group label {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  background: white;
+  padding: 0 5px;
+  color: #aaa;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+/* Labels flottants */
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 0.85rem;
+  color:  #28a745;
+}
+
+/* Bouton envoyer */
+.submit-btn {
+  background: #28a745;
+  color: white;
+  font-size: 1.2rem;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #2980b9;
+}
+
+/* Message de confirmation */
+.confirmation-message {
+  margin-top: 30px;
+  color: green;
+  font-size: 1.5rem;
+  display: none;
+}
+
+/* Responsive mobile */
+@media (max-width: 600px) {
+  .quote-form {
+    padding: 30px 20px;
+  }
+}
+
+
+
+  /*    FAQ   */
+
+
+    /* Style général de la section FAQ */
+.faq-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.faq-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 700;
+}
+
+/* Conteneur des items FAQ */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Style de chaque item FAQ */
+.faq-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Question FAQ */
+.faq-question {
+  width: 100%;
+  padding: 20px;
+  font-size: 1.2rem;
+  color: #333;
+  background-color: #28a745;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.faq-question:hover {
+  background-color: #218838;
+}
+
+/* Réponse FAQ */
+.faq-answer {
+  padding: 20px;
+  font-size: 1rem;
+  color: #555;
+  display: none;
+}
+
+/* Effet d'animation du dépliage */
+.faq-item.active .faq-answer {
+  display: block;
+  animation: slideIn 0.4s ease-in-out;
+}
+
+/* Animation du slide-in */
+@keyframes slideIn {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 1000px;
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 2rem;
+  }
+  .faq-question {
+    font-size: 1.1rem;
+  }
+}
+
+  /*  FAQ  */
+
+  /* Style général de la section FAQ */
+.faq-section {
+  padding: 80px 20px;
+  background-color: #eaf2f4; /* Couleur de fond claire, plus moderne */
+  text-align: center;
+}
+
+.faq-title {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #34495e;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Conteneur des items FAQ */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Style de chaque item FAQ */
+.faq-item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-5px); /* Effet d'élévation au survol */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Question FAQ avec icône */
+.faq-question {
+  width: 100%;
+  padding: 20px;
+  font-size: 1.3rem;
+  color: #fff;
+  background-color: #1abc9c; /* Fond avec couleur accentuée */
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+  font-weight: 600;
+  border-radius: 10px 10px 0 0;
+  box-sizing: border-box;
+}
+
+.faq-question:hover {
+  background-color: #16a085; /* Changement au survol */
+  padding-left: 30px; /* Agrandissement à gauche pour l'effet visuel */
+}
+
+.faq-icon {
+  margin-right: 10px; /* Espacement entre l'icône et le texte */
+  transition: transform 0.3s ease;
+}
+
+/* Réponse FAQ */
+.faq-answer {
+  padding: 20px;
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  background-color: #ecf0f1;
+  display: none;
+  border-radius: 0 0 10px 10px;
+  box-sizing: border-box;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
+}
+
+/* Effet d'animation du dépliage */
+.faq-item.active .faq-answer {
+  display: block;
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Animation du slide-in */
+@keyframes slideIn {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+/* Flèche qui tourne quand la réponse est dépliée */
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 2rem;
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+  }
+
+  .faq-answer {
+    font-size: 1rem;
+  }
+}
+
+/* Footer */
+
+
+/* Style du footer */
+.footer {
+  background-color: #34495e; /* Couleur de fond sombre */
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Conteneur du footer */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Titre de chaque section du footer */
+.footer-title {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #1abc9c;
+}
+
+/* Liens de navigation */
+.footer-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-nav a {
+  color: #ecf0f1;
+  text-decoration: none;
+  margin: 5px 0;
+  display: block;
+}
+
+.footer-nav a:hover {
+  color: #1abc9c;
+  transition: color 0.3s ease;
+}
+
+/* Section de contact */
+.footer-contact p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Icônes sociales */
+.footer-social .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 1.8rem;
+  color: #ecf0f1;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #1abc9c;
+  transition: color 0.3s ease;
+}
+
+/* Section de bas du footer */
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #95a5a6;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-nav, .footer-contact, .footer-social {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-nav ul {
+    padding: 0;
+  }
+}
+
+
+/* Responsive - Mobile adjustments */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .horizontal-bar {
+    width: 90%;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .services-section .headline,
+  .faq-title,
+  .section-title {
+    font-size: 2rem;
+  }
+
+  header .contact-btn a {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
